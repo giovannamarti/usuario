@@ -38,6 +38,7 @@ public class SecurityConfig {
         JwtRequestFilter jwtRequestFilter = new JwtRequestFilter(jwtUtil, userDetailsService);
 
         http
+
                 .csrf(AbstractHttpConfigurer::disable) // Desativa proteção CSRF para APIs REST (não aplicável a APIs que não mantêm estado)
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/usuario/login").permitAll() // Permite acesso ao endpoint de login sem autenticação
