@@ -12,8 +12,9 @@ import java.util.List;
 
 public class UsuarioDTO {
     private String nome;
-    private String emaiL;
+    private String email;
     private String senha;
     private List<EnderecoDTO> endereco;
     private List<TelefoneDTO> telefone;
 }
+

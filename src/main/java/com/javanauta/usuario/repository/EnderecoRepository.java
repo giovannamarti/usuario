@@ -1,6 +1,7 @@
 package com.javanauta.usuario.repository;
 
-import javanauta_gm.aprendendo_spring.infrastructure.entity.Endereco;
+
+import com.javanauta.usuario.entity.Endereco;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
