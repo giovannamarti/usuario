@@ -1,7 +1,7 @@
-package business;
+package com.javanauta.usuario.business;
 
-import business.converter.UsuarioConverter;
-import business.dto.UsuarioDTO;
+import com.javanauta.usuario.business.converter.UsuarioConverter;
+import com.javanauta.usuario.business.dto.UsuarioDTO;
 import com.javanauta.usuario.entity.Usuario;
 import com.javanauta.usuario.infrastructure.exception.ConflictException;
 import com.javanauta.usuario.infrastructure.exception.ResourceNotFoundException;
