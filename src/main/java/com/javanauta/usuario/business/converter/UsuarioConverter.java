@@ -1,8 +1,8 @@
-package business.converter;
+package com.javanauta.usuario.business.converter;
 
-import business.dto.EnderecoDTO;
-import business.dto.TelefoneDTO;
-import business.dto.UsuarioDTO;
+import com.javanauta.usuario.business.dto.EnderecoDTO;
+import com.javanauta.usuario.business.dto.TelefoneDTO;
+import com.javanauta.usuario.business.dto.UsuarioDTO;
 import com.javanauta.usuario.entity.Endereco;
 import com.javanauta.usuario.entity.Telefone;
 import com.javanauta.usuario.entity.Usuario;
@@ -16,11 +16,11 @@ public class UsuarioConverter {
 
     public Usuario paraUsuario(UsuarioDTO usuarioDTO) {
         return Usuario.builder()
-               // .nome(usuarioDTO.getNome())
+                .nome(usuarioDTO.getNome())
                 .email(usuarioDTO.getEmail())
                 .senha(usuarioDTO.getSenha())
-              //  .enderecos(paraListaEndereco(usuarioDTO.getEndereco()))
-              //  .telefones(paraListaTelefones(usuarioDTO.getTelefone()))
+                .enderecos(paraListaEndereco(usuarioDTO.getEndereco()))
+                .telefones(paraListaTelefones(usuarioDTO.getTelefone()))
 
                 .build();
 
@@ -48,7 +48,7 @@ public class UsuarioConverter {
     }
 
     public List<Telefone> paraListaTelefones(List<TelefoneDTO> telefoneDTOS) {
-return telefoneDTOS.stream().map(this::paraTelefone).toList();
+        return telefoneDTOS.stream().map(this::paraTelefone).toList();
     }
 
     public Telefone paraTelefone(TelefoneDTO telefoneDTO) {
@@ -58,15 +58,15 @@ return telefoneDTOS.stream().map(this::paraTelefone).toList();
                 .build();
     }
 
-    ///////////////////////////////////////////////// RETURN
+    /// ////////////////////////////////////////////// RETURN
 
     public UsuarioDTO paraUsuarioDTO(Usuario usuarioDTO) {
         return UsuarioDTO.builder()
-                //.nome(usuarioDTO.getNome())
+                .nome(usuarioDTO.getNome())
                 .email(usuarioDTO.getEmail())
                 .senha(usuarioDTO.getSenha())
-               // .endereco(paraListaEnderecoDTO(usuarioDTO.getEnderecos()))
-                //.telefone(paraListaTelefonesDTO(usuarioDTO.getTelefones()))
+                .endereco(paraListaEnderecoDTO(usuarioDTO.getEnderecos()))
+                .telefone(paraListaTelefonesDTO(usuarioDTO.getTelefones()))
 
                 .build();
 

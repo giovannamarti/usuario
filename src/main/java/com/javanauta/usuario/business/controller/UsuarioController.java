@@ -1,7 +1,7 @@
-package business.controller;
+package com.javanauta.usuario.business.controller;
 
-import business.UsuarioService;
-import business.dto.UsuarioDTO;
+import com.javanauta.usuario.business.UsuarioService;
+import com.javanauta.usuario.business.dto.UsuarioDTO;
 import com.javanauta.usuario.entity.Usuario;
 import com.javanauta.usuario.infrastructure.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
