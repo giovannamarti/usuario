@@ -33,7 +33,7 @@ public class UsuarioController {
                         usuarioDTO.getSenha())
         );
 
-        return "Bearer" + jwtUtil.generateToken(authentication.getName());
+        return "Bearer " + jwtUtil.generateToken(authentication.getName());
 
     }
 
@@ -48,6 +48,10 @@ public class UsuarioController {
         usuarioService.deletaUsuarioPorEmail(email);
         return ResponseEntity.ok().build();
     }
-
+    @PutMapping
+    public ResponseEntity<UsuarioDTO>atualizDadoUsuario(@RequestBody UsuarioDTO dto,
+                                                        @RequestHeader("Authorization") String token){
+        return ResponseEntity.ok(usuarioService.atualizaDadosUsuario(token,dto));
+    }
 
 }
