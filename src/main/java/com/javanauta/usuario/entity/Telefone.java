@@ -22,4 +22,5 @@ public class Telefone {
     @Column(name = "usuario_id")
     private Long usuario_id;
 
+
 }

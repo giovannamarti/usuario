@@ -2,6 +2,7 @@ package com.javanauta.usuario.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.stereotype.Component;
 
 
 @Getter
@@ -32,6 +33,9 @@ public class Endereco {
     private Long usuario_id;
 
 
+    }
 
 
-}
+
+
+
