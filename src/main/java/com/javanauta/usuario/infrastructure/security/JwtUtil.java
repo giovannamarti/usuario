@@ -42,6 +42,7 @@ public class JwtUtil {
         return extractClaims(token).getSubject();
     }
 
+
     // Verifica se o token JWT está expirado
     public boolean isTokenExpired(String token) {
         // Compara a data de expiração do token com a data atual
