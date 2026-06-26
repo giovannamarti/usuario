@@ -27,7 +27,7 @@ public class UsuarioConverter {
     }
 
     public List<Endereco> paraListaEndereco(List<EnderecoDTO> enderecoDTOS) {
-//return enderecoDTOS.stream().map(this::paraEndereco).toList();
+
         List<Endereco> enderecos = new ArrayList<>();
         for (EnderecoDTO enderecoDTO : enderecoDTOS) {
             enderecos.add(paraEndereco(enderecoDTO));
@@ -73,7 +73,6 @@ public class UsuarioConverter {
     }
 
     public List<EnderecoDTO> paraListaEnderecoDTO(List<Endereco> enderecoDTOS) {
-//return enderecoDTOS.stream().map(this::paraEndereco).toList();
         List<EnderecoDTO> enderecos = new ArrayList<>();
         for (Endereco enderecoDTO : enderecoDTOS) {
             enderecos.add(paraEnderecoDTO(enderecoDTO));
