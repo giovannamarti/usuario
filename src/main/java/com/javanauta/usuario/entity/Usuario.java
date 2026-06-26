@@ -5,8 +5,9 @@ import io.micrometer.common.lang.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
+
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,14 +18,14 @@ import java.util.List;
 @Entity
 @Builder
 @Table(name = "usuario" )
-public class Usuario implements UserDetails {
+public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "nome", length = 100)
     private String nome;
-    @Column(name = "email", length = 1)
+    @Column(name = "email", length = 100)
     private String email;
     @Column(name = "senha")
     private String senha;
