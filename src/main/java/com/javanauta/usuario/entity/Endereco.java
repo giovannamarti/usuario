@@ -2,7 +2,8 @@ package com.javanauta.usuario.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
 
 
 @Getter
@@ -12,7 +13,8 @@ import org.springframework.stereotype.Component;
 @Entity
 @Builder
 @Table(name = "endereco" )
-public class Endereco {
+public class Endereco implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +32,7 @@ public class Endereco {
     @Column(name = "cep",length = 9)
     private String cep;
     @Column(name = "usuario_id")
-    private Long usuario_id;
+    private Long usuario_Id;
 
 
     }
