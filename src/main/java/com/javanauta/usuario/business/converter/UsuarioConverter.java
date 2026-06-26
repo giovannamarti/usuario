@@ -127,6 +127,7 @@ public class UsuarioConverter {
                 .cep(dto.getCep() != null ? dto.getCep() : entity.getCep())
                 .complemento(dto.getComplemento() != null ? dto.getComplemento() : entity.getComplemento())
                 .estado(dto.getEstado() != null ? dto.getEstado() : entity.getEstado())
+                .usuario_Id(entity.getUsuario_Id())
 
                 .build();
 
@@ -137,6 +138,7 @@ public class UsuarioConverter {
                 .id(entity.getId())
                 .ddd(dto.getDdd() != null ? dto.getDdd() : entity.getDdd())
                 .numero(dto.getNumero() != null ? dto.getNumero() : entity.getNumero())
+                .usuario_Id(entity.getUsuario_Id())
                 .build();
 
 
